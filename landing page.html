@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Online Banking</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="landing.css" />
+  </head>
+
+  <body>
+    <main class="app hidden">
+      <div class="balance">
+        <div>
+          <p class="balance__label">Current balance</p>
+          <p class="balance__date">as of <span class="date">05/04/22</span></p>
+        </div>
+        <p class="balance__value">00000$</p>
+      </div>
+
+      <div class="movements">
+        <div class="movements__row">
+          <div class="movements__type movement__type--deposit">2 deposit</div>
+          <div class="movements date">4 days ago</div>
+          <div class="movements__value">4 000$</div>
+        </div>
+        <div class="movements__row">
+          <div class="movements__type movements__type--withdrawal">
+            1 withdrawal
+          </div>
+          <div class="movements date">03/04/22</div>
+          <div class="movements value">-222$</div>
+        </div>
+      </div>
+
+      <div class="summary">
+        <p class="summary__label">In</p>
+        <p class="summary__value__value--in">0000$</p>
+        <p class="summary__label">Out</p>
+        <p class="summary__label__value--out">0000$</p>
+        <p class="summary__label">Interest</p>
+        <p class="summary__label__value--interest">0000$</p>
+        <button class="btn--sort">&downarrow; SORT</button>
+      </div>
+
+      <div class="operation operation--transfer">
+        <h2>Transfer money</h2>
+        <form class="form form--transfer">
+          <input type="text" class="form__input form__input--to" />
+          <input type="number" class="form__input form__input--amount" />
+          <button class="form__btn form__btn--transfer">&rarr;</button>
+          <label class="form__label">Transfer to</label>
+          <label class="form__label">Amount</label>
+        </form>
+      </div>
+
+      <div class="operation operation--loan">
+        <h2>Request loan</h2>
+        <form class="form form--loan">
+          <input type="number" class="form__input form__input--loan-amount" />
+          <button class="form__btn form__btn--loan">&rarr;</button>
+          <label class="form__label form__label--loan">Amount</label>
+        </form>
+      </div>
+
+      <p class="logout-timer">
+        You will be logged out in <span class="timer">05:00</span>
+      </p>
+    </main>
+    <div class="container">
+      <div class="row">
+        <nav class="navbar">
+          <h1>Logo</h1>
+          <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Services</a></li>
+            <li><a href="">Portfolio</a></li>
+            <li><a href="">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="content">
+          <h1>Banking Made Easy</h1>
+          <p>Your First Choice Bank</p>
+          <button class="signup">Register Here</button>
+          <button class="login">Sign in</button>
+        </div>
+        <div class="sign-up hidden">
+          <button class="close-signup">&times;</button>
+          <h2>Sign Up Here</h2>
+          <input type="text" placeholder="Full name" />
+          <br />
+          <input type="text" placeholder="Choose Username" />
+          <br />
+          <input type="password" placeholder="choose password" />
+          <br />
+          <input type="password" placeholder="confirm password" />
+          <br />
+          <button>submit</button>
+        </div>
+        <div class="log-in hidden">
+          <button class="close-login">&times;</button>
+          <h2>Login To Get Started...</h2>
+          <input class="input--user" type="text" placeholder="User" />
+          <br />
+          <input
+            class="input--pin"
+            type="password"
+            placeholder="enter password"
+          />
+          <br />
+          <button class="log--in">Log in</button>
+        </div>
+      </div>
+    </div>
+    <div class="overlay hidden"></div>
+    <script src="landing.js"></script>
+  </body>
+</html>
